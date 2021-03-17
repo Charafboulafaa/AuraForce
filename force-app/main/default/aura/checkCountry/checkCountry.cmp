@@ -1,0 +1,16 @@
+<aura:component controller="auraForce" implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="countryData" type="Country__c"/>
+    <aura:attribute name="countryCode" type="String" />
+
+    <lightning:input type="text" label="Enter Country Code:" value="{!v.countryCode}" />
+    <lightning:button label="Enter" onclick="{!c.checkCountry}" />
+
+    <lightning:card class="slds-text-align_center">
+        <p class="slds-text-heading_large">
+            {!v.countryData[0].Name}
+        </p>
+        <p class="slds-text-body_regular">Total Confirmed: {!v.countryData[0].TotalConfirmed__c}</p>
+        <p class="slds-text-body_regular">Total Deaths: {!v.countryData[0].TotalDeaths__c}</p>
+        <p class="slds-text-body_regular">Total Recovered: {!v.countryData[0].TotalRecovered__c}</p>
+    </lightning:card>
+</aura:component>
