@@ -12,9 +12,7 @@
             let state = res.getState();
 
             if(state === "SUCCESS"){
-                console.log('Charaf', countryCode)
                 component.set("v.countryData", res.getReturnValue());
-            	console.log('result', res.getReturnValue())
             }
             else if (state === "ERROR") {
                 var errors = res.getError();

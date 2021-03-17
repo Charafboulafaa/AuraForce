@@ -1,4 +1,4 @@
-public with sharing class auraForce {
+public without sharing class auraForce {
     
     public static List<Country__c> countriesList = new List<Country__c>();
 
